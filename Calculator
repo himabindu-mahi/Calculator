@@ -1,0 +1,82 @@
+import java.io.*;
+import java.util.*;
+class Calculator
+{
+	
+	public void add(int a, int b)                          //Methods Declaration & defining
+	{
+		int v=a+b;
+		System.out.println("Addintion of two numbers:  " +v);
+	}
+	public void sub(int a, int b)                         // Subtraction method
+	{
+		int x=a-b;
+		System.out.println("Subtraction of two numbers:  " +x);
+	}
+	public void mul(int a,int b)                          //multiplication method
+	{
+		int y=a*b;
+		System.out.println("Multiplication of the two numbers:  " +y);
+	}
+	public void div(int a,int b)                          // Division method
+	{
+		int z=a/b;
+		System.out.println("Division of two numbers:  " +z);
+	}
+	
+	public static void main(String args[])
+	{   
+	
+		Calculator cal=new Calculator();                 // Object creation
+		Scanner sc=new Scanner(System.in);               // Take inputs from the keyboard
+		System.out.println("Enter A value");
+		int a=sc.nextInt();                              // Entered values should be assigned
+		System.out.println("Enter B Value");
+		int b=sc.nextInt();
+		System.out.println("1.Addition  \n2.Subtraction \n3.Multiplication   \n4.Division");
+		System.out.println("Select any one of the option ");
+		int c=sc.nextInt();
+	/*	like wise also we can access the methods
+		cal.add(a,b);
+		cal.sub(a,b);
+		cal.mul(a,b);
+		cal.div(a,b);  
+	*/
+		
+	switch(c)                                    // using switch statements we can use any one of the operation it just like an calculator
+		{
+			case 1: 
+					cal.add(a,b);
+					break;
+			case 2:	
+						cal.sub(a,b);            // We can access the methods
+						break;
+			case 3:
+						cal.mul(a,b);
+						break;
+			case 4:
+						cal.div(a,b);
+						break;
+			default:
+				
+					System.out.println("Enter right option");
+		} 
+		
+	}
+}
+/* Output:--
+Enter A value
+10
+Enter B Value
+20
+1.Addition
+2.Subtraction
+3.Multiplication
+4.Division
+Select any one of the option
+3
+Multiplication of the two numbers:  200
+
+
+*/
+
